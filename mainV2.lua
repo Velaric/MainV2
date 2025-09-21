@@ -6211,7 +6211,7 @@ function Library:CreateWindow(Config)
 	Library.MinimizeKey = Config.MinimizeKey or Enum.KeyCode.LeftControl
 	Library.UseAcrylic = Config.Acrylic or false
 	Library.Acrylic = Config.Acrylic or false
-	Library.Theme = Config.Theme or "Sunset"
+	Library.Theme = Config.Theme or "Dark"
 	if Config.Acrylic then
 		Acrylic.init()
 	end
@@ -6286,7 +6286,7 @@ local httpService = game:GetService("HttpService")
 local InterfaceManager = {} do
 	InterfaceManager.Folder = "FluentSettings"
 	InterfaceManager.Settings = {
-		Theme = "Sunet",
+		Theme = "Dark",
 		Acrylic = true,
 		Transparency = true,
 		MenuKeybind = "LeftControl"
@@ -6426,4 +6426,5 @@ UICorner.CornerRadius = UDim.new(1, 0)
 UICorner.Parent = ImageButton
 ImageButton.MouseButton1Click:Connect(function() game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.End, false, game) end)
 task.wait(0.1)
+
 return Library, SaveManager, InterfaceManager, Mobile
